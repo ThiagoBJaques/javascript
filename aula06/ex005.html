@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conhecendo o DOM</title>
+
+    <!-- Estrutura básica do documento -->
+
+    <style>
+        body {
+            background-color: rgb(67, 67, 203);
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p> <!-- Primerio parágrafo 0 -->
+    <p>Aprendendo a usar <strong>Dom</strong> em javascript.</p>
+
+    <!-- Selecionando o elemento por ID -->
+    <div id="msg">Clique em mim</div>
+    <script>
+
+        /* 
+        Nome da variárel é p1 que será o parágrafo, 
+        dentro do getElementByTagName('p')[] precisamos colocar o "p" para 
+        identificar o elemento parágrafo os [conchetes 1 2 3] identificam
+        qual vai ser o parágrafo quando tiver mais de um.
+        */
+        var p1 = window.document.getElementsByTagName('p')[1]
+        // window.document.write(p1.innerHTML)
+
+        p1.style.color = 'orange' // Podemos mudar a cor também
+
+        // Variável que está dentro do window, que está dentro do document que está dentro do body.
+        var corpo = window.document.body
+        corpo.style.backgroundColor = 'brown'
+
+        var d = window.document.getElementById('msg')
+        d.style.background = 'blue'
+        d.innerText = 'Estou aguardando...'
+        // Comando simplificado
+
+        /* 
+        
+        innerText = pega so o texto sem formatação
+
+        innerHTML = pega o HTML todo junto com formatação, inclusive com as tags filhas.
+
+         write significa escrever na tela
+
+         p1.innerText significa o texto que está dentro do primeiro parágrafo 
+         Podemos adicionar mais texto 'Escrevendo ele dentro das aspas' + e colocando o sinal de adição no final para juntar com o p1.innerText
+        */
+    </script>
+</body>
+</html>

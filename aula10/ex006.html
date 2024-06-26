@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Don</title>
+    <style>
+        div#area { /* Em CSS a div é represenrada pela # */
+            background: green;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.3em;
+            width: 200px;
+            height: 200px;
+            line-height: 200px; /* Centralizar o texto */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>  <!-- onclick vai chamar o nome da ação que ocorrera "clicar"
+             Quando eu clicar em cima da div ele vai disparar o clicou -->
+    <div id="area">
+        Interaja...
+    </div>
+    <script>
+        /* Quando clicar na div "area" vai criar um objeto chamado "a" que vai 
+        fazer uma ligação do objeto "a" dentro do JS com o elemento  de id "area"
+        que esta dentro do HTML e o objeto vai mudar o conteúdo dele para "clicou" */
+
+        // O JS que vai tratar de ligar o HTML e o JS pelo EventListener
+
+        var a = window.document.getElementById('area') // id mesmo da div
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar() {   // bloco todo o conjunto, identifica nome da função
+             
+            a.innerText = "Clicou!"
+            a.style.background = 'red' // Quando clicar o fundo vai ficar vermelho
+        }
+
+        function entrar() {
+        
+            a.innerText = "Entrou!"
+        }
+        
+        function sair() {
+        
+            a.innerText = "Saiu!"
+            a.style.background = 'green' // Quando sair o fundo vai voltar para o verde
+        }
+    </script>
+</body>
+</html>

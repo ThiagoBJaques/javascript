@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando dados</title>
+</head>
+<body>
+    <h1>Trabalhando com Dados v2.0</h1>
+    <button onclick="clicar()">Clique para começar</button>
+    <section id="resultado">
+        <p>Aqui vai aparecer o resultado</p>
+    </section>
+    <script>
+        function clicar() {
+            let nome = window.prompt('Qual é seu nome?')
+            let res = window.document.getElementById('resultado')
+            res.innerHTML = `Óla, ${nome}! É um grande prazer te conhecer!`
+        }
+    </script>
+</body>
+</html>

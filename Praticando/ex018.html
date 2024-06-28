@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        button {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1em;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador de Cliques</h1>
+    <button onclick="clicar()">Clique em mim</button>
+    <button onclick="zerar()">Zerar contador</button>
+    <div id="res">
+        <p>O contador está com 0 cliques</p>
+    </div>
+
+    <script>
+        let contador = 0
+        let res = document.getElementById('res')
+
+        function clicar() {
+            contador ++
+            res.innerHTML = `<p>O contador está com ${contador} cliques.<p/>`
+        }
+
+        function zerar() {
+            contador = 0
+            res.innerHTML = `<p>O contador está com 0 cliques.<p/>`
+        }
+    </script>
+</body>
+</html>

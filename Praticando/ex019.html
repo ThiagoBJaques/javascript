@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        button {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Externo</h1>
+    <button onclick="ação1()">Ação1</button>
+    <button onclick="ação2()">Ação2</button>
+    <button onclick="ação3()">Ação3</button>
+    <button onclick="ação4()">Ação4</button>
+    <div id="res">
+        <p>Aqui vou registrar sua ações com os botões acima.</p>
+    </div>
+    <script>
+
+        let res = window.document.getElementById('res')
+
+        function ação1() {
+            res.innerHTML += '<p>Clicou no primeiro botão<p>'
+        } 
+
+        function ação2() {
+            res.innerHTML += '<p>Clicou no segundo botão<p>'
+        }
+
+        function ação3() {
+            res.innerHTML += '<p>Clicou no terceiro botão<p>'
+        }
+
+        function ação4() {
+            res.innerHTML += '<p>Clicou no quarto botão<p>'
+        }
+    </script>
+</body>
+</html>

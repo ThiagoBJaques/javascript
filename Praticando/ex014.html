@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Dados</h1>
+    <button onclick="clique()">Clique para começar</button>
+    <div id="res">
+    <p>Aqui vai aparecer o resultado...</p>
+    </div>
+</body>
+<script>
+    function clique() {
+        let nome = window.prompt('Qual é seu nome?')
+        let res = window.document.getElementById('res')
+        res.innerHTML = `<p>Óla, ${nome}! É um grande prazer te conhcer!</p>`
+    }
+</script>
+</html>

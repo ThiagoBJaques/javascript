@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h2>Calculando a média do aluno(a)</h2>
+    <button onclick="calcular()">Calcular média</button>
+    <div id="res">
+        <p>O resultado vai aparecer aqui...</p>
+    </div>
+
+    <script>
+        function calcular() {
+            let nome = window.prompt('Qual é o nome do aluno?')
+            let not1 = Number(window.prompt(`Qual foi a primeira nota do aluno ${nome}`))
+            let not2 = Number(window.prompt(`Além de ${not1}, qual foi a outra nota de ${nome}`))
+            soma = (not1 + not2)/2
+
+            
+            let res = window.document.getElementById('res')
+
+            res.innerHTML = `<p>Calculando a média final de ${nome}.</p>`
+            res.innerHTML += `<p>As notas obtidas foram ${not1} e ${not2}.</p>`
+            res.innerHTML += `<p>A média final será ${soma}.</p>`
+        }
+    </script>
+</body>
+</html>

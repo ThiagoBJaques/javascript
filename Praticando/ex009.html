@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: beige;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        button {
+            background-color: chocolate;
+            color: white;
+            text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.411);
+            font-size: 1.5em;
+            padding: 10px;
+            border-radius: 10px;
+            border: 3px solid black;
+            box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.416);
+            cursor: pointer;            
+        }
+
+        p {
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Números</h1>
+    <button onclick="calcular()">Clique para calcular</button>
+    <div id="resultado">
+        <p>O resultado vai aparecer aqui...</p>
+    </div>
+    <script>
+        window.alert('Seja bem-vindo(a) ao meu site')
+
+        function calcular() {
+            let numero = window.prompt('Digite um número:')
+            let resultado = window.document.getElementById('resultado')
+            //let num = Number(numero.value)
+
+            resultado.innerHTML = `<p>O dobro de ${numero} é ${numero*2} e a metade é ${numero/2}!</p>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Ímpar</title>
+</head>
+<body>
+    <h1>É par ou é Ímpar</h1>
+    <button onclick="calcular()">Clique para iniciar</button>
+    <div id="res">
+        <p>O resultado vai aparecer aqui...</p>
+    </div>
+    <script>
+        function calcular() {
+            let num1 = Number(window.prompt('Digite um número:'))
+            
+
+            let tipo
+            if ( num1 % 2 == 0 ) {
+                tipo = 'Par'
+            } else {
+                tipo = 'Ímpar'
+            }
+
+            let res = window.document.getElementById('res')
+            res.innerHTML = `O número ${num1} que foi digitado é ${tipo}!`
+        }
+    </script>
+</body>
+</html>
